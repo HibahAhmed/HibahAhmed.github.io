@@ -108,7 +108,7 @@ function buildCharts(sample) {
     });
 }
 // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
-Plotly.newPlot();
+// Plotly.newPlot();
 
 // 1. Create the trace for the bubble chart.
 var bubbleData = [
@@ -122,8 +122,8 @@ var bubbleData = [
             colorscales: "Earth",
             size: sampleValues
         }
-
     }
+
 ];
 
 // 2. Create the layout for the bubble chart.
