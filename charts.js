@@ -101,9 +101,43 @@ function buildCharts(sample) {
             title: "the top 10 Bacteria Cultures found",
 
         };
-        // 10. Use Plotly to plot the data with the layout. 4
+        // 10. Use Plotly to plot the data with the layout. 
 
         Plotly.newPlot("bar", barData, barLayout);
 
     });
 }
+// Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
+Plotly.newPlot();
+
+// 1. Create the trace for the bubble chart.
+var bubbleData = [
+    {
+        x: sampleIds,
+        y: sampleValues,
+        text: SampleLabels,
+        mode: "markers",
+        marker: {
+            color: sampleIds,
+            colorscales: "Earth",
+            size: sampleValues
+        }
+
+    }
+];
+
+// 2. Create the layout for the bubble chart.
+var bubbleLayout = {
+
+    title: "Bacteria Cultures Per Sample",
+    hoverlabel: sampleIds,
+    hovermode: "closest",
+    showlegend: false,
+    xaxis: {
+        title: "OTU ID"
+    }
+
+};
+
+// 3. Use Plotly to plot the data with the layout.
+Plotly.newPlot("bubble", bubbleData, bubbleLayout);
